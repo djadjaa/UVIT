@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="2.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="telo">
+            <% if (lekovi.length ===0){%>
+                Nema trazenih lekova
+            <% } else { %>
+            <h2>Trazeni lekovi su:</h2>
+            
+            <div class="lekic">
+                <% for (let lek of lekovi) { %>
+                    lek:
+                    <%= lek.nazivLeka %>
+                    <br>
+                    proizvodjac:
+                    <%= lek.proizvodjac %>
+                    <br> simptomi:
+                    <% for (let s of lek.simptomi){ %>
+                        <%= s + ' ' %>
+                    <%} %>
+                    <br>
+                    miligrami:
+                    <div class="kruzici">
+                    <% for (let m of lek.miligrami){ %>
+                        <button class="krug"><%=m %></button>
+                    <%}%>
+                    </div>
+                    <br>
+                    
+                    <% } %>
+                    
+                    <form action="http://localhost:3000/recept" method="post">
+                        <input type="hidden">
+                        <input type="submit" value="Posalji">
+                    </form>
+               
+                <% } %>
+            </div>
+        </div>
+    </body>
+
+    <script>
+                /*   
+        let buttoni=document.getElementsByTagName("button");
+        for (let b of buttoni){
+            b.addEventListener('click', function(){
+                    b.style.backgroundColor="red";
+            });
+        }
+        */
+        const groups = document.querySelectorAll('.kruzici');
+        // Iteriramo kroz svaki div (grupu dugmadi)
+        groups.forEach(group => {
+            // Selektujemo dugmad unutar trenutnog diva
+            const buttons = group.querySelectorAll('button');
+
+            // Dodajemo događaj za klik svakom dugmetu unutar grupe
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Resetujemo sva dugmad unutar ove grupe
+                    buttons.forEach(btn => btn.style.backgroundColor = '#e9e9ed');
+
+                    // Postavljamo kliknuto dugme na crvenu boju
+                    this.style.backgroundColor = 'red';
+                });
+            });
+        });
+            
+    </script>
+</html>

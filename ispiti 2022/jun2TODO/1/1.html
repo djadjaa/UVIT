@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="telo">
+        <h2>Podaci o pacijentu</h2>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Licne info</legend>
+                <label for="imeiprezime">Ime i prezime:</label>
+                <input type="text" name="imeiprezime" id="imeiprezime"><br>
+                <label for="jmbg">JMBG:</label>
+                <input type="text" name="jmbg" id="jmbg"><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Medicinske info</legend>
+                <label for="simptomi">Simptomi</label><br>
+                <input type="checkbox" id="upalagrla" name="upalagrla" value="upalagrla">
+                <label for="upalagrla"> Upala grla</label><br>
+                <input type="checkbox" id="curenjeiznosa" name="curenjeiznosa" value="curenjeiznosa">
+                <label for="curenjeiznosa"> Curenje iz nosa</label><br>
+                <input type="checkbox" id="temperatura" name="temperatura" value="temperatura">
+                <label for="temperatura"> Temperatura</label><br>
+                <input type="checkbox" name="glavobolja" id="glavobolja" value="glavobolja">
+                <label for="glavobolja">Glavobolja</label><br>
+            </fieldset>
+            
+            <button type="submit">Prijavi se</button>
+        </form>
+    </div>
+</body>
+</html>

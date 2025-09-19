@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "60b7b8c9c9b0c8665c7f005d"
+  },
+  "nazivLeka": "Hemomicin",
+  "proizvodjac": "Hemopharm",
+  "simptomi":["upala grla","bakterijska infekcija"],
+  "miligrami":[500,200,100]
+},{
+  "_id": {
+    "$oid": "60b7b8c9c9b0c8665c7f005e"
+  },
+  "nazivLeka": "Eritromicin",
+  "proizvodjac": "Hemopharm",
+  "simptomi":["upala grla","bakterijska infekcija"],
+  "miligrami":[500,200,100, 50]
+},{
+  "_id": {
+    "$oid": "60b7b8c9c9b0c8665c7f005f"
+  },
+   "nazivLeka": "Fervex",
+  "proizvodjac": "Impharm Co",
+  "simptomi":["temperatura","glavobolja"],
+  "miligrami":[10]
+
+},{
+  "_id": {
+    "$oid": "60b7bd0bc9b0c8665c7f0061"
+  },
+   "nazivLeka": "Marisol",
+  "proizvodjac": "Farma Co",
+  "simptomi":["curenje nosa"],
+  "miligrami":[10]
+},{
+  "_id": {
+    "$oid": "60b7bd22c9b0c8665c7f0062"
+  },
+   "nazivLeka": "Rapten K",
+  "proizvodjac": "Galenika",
+  "simptomi":["upala misica","glavobolja", "reuma", "zubobolja"],
+  "miligrami":[100, 75, 50]
+ 
+}]

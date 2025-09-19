@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teniski turniri</h1>
+    <form action="/turnir" method="get">
+        <select name="turnir" id="">
+            <% for (let t of turniri) { %>
+                <option><%= t %></option>
+            <%}%>
+        </select>
+        <input type="submit" value="prikazi turnir" class="dugme">
+    </form>
+</body>
+</html>

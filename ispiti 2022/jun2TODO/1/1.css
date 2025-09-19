@@ -1,0 +1,39 @@
+.telo{
+    border-radius: 5px;
+    width:220px;
+    height: 430px;
+    padding-right: 20px;
+    background-image: url('/1/m.jpg');
+}
+/*
+legend{
+    position: absolute;
+    left:20px;
+    bottom:93%;
+    z-index: 1;
+    display: block;
+}*/
+/*
+fieldset{
+    position: relative;
+    padding:8%;
+    top: 10px;
+    margin-bottom: 10%;
+    border: solid 1px grey;
+    border-radius: 5px;
+}*/
+
+fieldset{
+    border-radius: 5px;
+    border-color: grey;
+    margin-bottom: 10%;
+}
+
+label, legend{
+    font-weight: bold;
+}
+
+button{
+    position: relative;
+    left: 50px;
+}

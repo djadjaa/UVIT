@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Australian open</h1>
+    <div id="line"></div>
+    <% for (let i of igre) { %>
+        <div class="game">
+            <table>
+                <tr>
+                    <td>Vreme: <%= i.vreme %> </td>
+                </tr>
+                <tr>
+                    <td> <%= i.igrac1 %> </td>
+                    <% for (let p of i.poeni1.split('-')){ %>
+                        <td> <%= p %> </td>
+                    <%}%>
+                </tr>
+                <tr>
+                    <td><%= i.igrac2 %></td>
+                    <% for(let p of i.poeni2.split('-')) { %>
+                        <td><%= p %></td>
+                    <%}%>
+                </tr>
+            </table>
+        </div>
+    <%}%>
+
+    
+    <h1>Add game</h1>
+    <form action="/unesiturnir", method="get">
+        <input type="text" name="turnir" value="<%=turnir%>" hidden>
+        <table>
+            <tr>
+                <td>
+                    Vreme:
+                    <input type="number" name="sati" placeholder="hh">
+                    <input type="number" name="minuti" placeholder="mm">
+                </td>     
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="prvi" placeholder="prvi igrac">
+                </td>
+                <td>
+                    <input type="number" name="prvi1">
+                </td>
+                <td>
+                    <input type="number" name="prvi2">
+                </td>
+                <td>
+                    <input type="number" name="prvi3">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="drugi" placeholder="drugi igrac">
+                </td>
+                <td>
+                    <input type="number" name="drugi1">
+                </td>
+                <td>
+                    <input type="number" name="drugi2">
+                </td>
+                <td>
+                    <input type="number" name="drugi3">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="unesi igru" class="dugme">
+    </form>
+</body>
+</html>

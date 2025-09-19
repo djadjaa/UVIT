@@ -1,0 +1,33 @@
+h2{
+    text-align: center;
+    margin-bottom: 5px;
+}
+table{
+    border: 3px solid black;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    border-collapse: collapse;
+    margin: auto;
+}
+th{
+    background-color: darkgray;
+    text-decoration-color: white;
+    border: 3px solid black;
+}
+td{
+    padding: 8px;
+}
+.gornji{
+    width: 300px;
+}
+.donji{
+    border-top: 3px solid black;
+}
+.tackice{
+    border: 2px dotted black;
+}
+img{
+    width: 70px;
+    height: 70px;
+}

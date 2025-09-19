@@ -1,0 +1,43 @@
+<!-- treci pod b -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/1.css">
+</head>
+<body>
+    <h2>LISTA KORISNIKA</h2>
+    <table>
+        <tr>
+         <th class="gornji">SLIKA</th>
+         <th class="gornji">INFORMACIJE</th>  
+        </tr>
+        <% for(let korisnik of korisnici){ %>
+        <tr class="donji">
+            <td rowspan="3"><img src="/th.jpeg" alt="slika"></td>
+            <td class="tackice">IME: <%= korisnik.ime %></td>
+        </tr>
+        <tr>
+            <td class="tackice">STAROST: <%= korisnik.starost %></td>
+        </tr>
+        <tr>
+            <td class="tackice">
+            <form method="get" action="/user/"> <!-- treci pod c samo dodao ovaj method i action  na b-->
+            <input type="text" name="id" value="<%= korisnik._id %>" hidden>
+            <% if(korisnik.admin){%>
+            <input type="submit" value="OBRISI KORISNIKA" disabled>
+            <% } %>
+            <% if(!korisnik.admin){%>
+            <input type="submit" value="OBRISI KORISNIKA">
+            <% } %>
+            </form>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+</body>
+</html>
+<!-- ---------------------------------------------------------- -->

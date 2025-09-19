@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/1.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/userList/starost" method="post">
+    <input type="number" name="godine">
+    <input type="submit" value="Filtriraj">
+    </form>
+    <h1>LISTA KORISNIKA</h1>
+        <table>
+            <thead>
+                <th>SLIKA</th>
+                <th>INFORMACIJE</th>
+            </thead>
+            <%for (let korisnik of korisnici){%>
+            <tr>
+                <td rowspan="3" class="slika">
+                    <img src="/user.png" alt="slika">
+                </td>
+                <td>IME: <%= korisnik.ime%> <%=korisnik.prezime%></td>
+            </tr>
+            <tr><td>STAROST: <%= korisnik.starost%></td></tr>
+            <tr>
+                <td>
+                    <form method="get" action="/userList/user/">
+                    <input type="text" name="id" value="<%=korisnik._id%>" hidden>
+                    <% if(korisnik.admin){%>
+                    <input type="submit" value="obrisi korisnika" disabled>
+                    <%}%>
+                    <% if(!korisnik.admin){%>
+                    <input type="submit" value="obrisi korisnika">
+                    <%}%>
+                    </form>
+                </td>
+            </tr>
+            <%}%>
+        </table>
+
+    <% if(obrisano){ %>
+        <script>
+            window.alert('Uspesno brisanje')
+        </script>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="1.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="telo">
+            <h2>Podaci o pacijentu</h2>
+            <!--treci zadatak:-->
+        <form action="http://localhost:3000/lekovi"
+            method = "GET">
+        <fieldset>
+            <legend>Licne info</legend>
+            <label>Ime i prezime:</label>
+            <input type="text" name="imep">
+            <br>
+            <label>JMBG:</label>
+            <input type="text" name="jmbg">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Medicinske info</legend>
+            <b>Simptomi:</b><br>
+            <input type="checkbox" name="upalagrla">
+            <label>upala grla</label>
+            <br>
+            <input type="checkbox" name="cnos">
+            <label>curenje nosa</label>
+            <br>
+            <input type="checkbox" name="temp">
+            <label>temperatura</label>
+            <br>
+            <input type="checkbox" name="glavobolja">
+            <label>glavobolja</label>
+            <br>
+            <input type="checkbox" name="pritisak">
+            <label>pritisak</label>
+            <br>
+        </fieldset>
+        <button type="submit">Prijavi se</button>
+        </form>
+        </div>
+    </body>
+
+
+</html>

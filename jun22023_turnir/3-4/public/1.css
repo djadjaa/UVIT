@@ -1,0 +1,57 @@
+body{
+    padding: 30px;
+}
+h1{
+    text-align: center;
+}
+/*
+div ce se pojaviti levo i desno od naslova
+*/
+h1::before, h1::after{
+    content: url(./left.gif);
+    /*display: inline-block;*/
+}
+
+#line{
+    height: 20px;
+    background-color: beige;
+    background-image: url(./ball.png);
+    background-size: 20px 20px;
+}
+
+.game{
+    border: solid darkgreen 2px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.game table td{
+    background-color: rgb(163, 197, 163);
+}
+
+table{
+    margin: 10px;
+    /*centriranje tabele*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td{
+    width: 20px;
+}
+/*prvi elem*/
+td:first-child{
+    width: 200px;
+}
+
+.winner{
+    font-weight: 700;
+}
+
+input[type="number"]{
+    width: 40px;
+}
+
+.dugme{
+    width: 100%;
+}

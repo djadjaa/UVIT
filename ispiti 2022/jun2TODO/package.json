@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "mongoose": "^7.0.14"
+  },
+  "name": "zadaci",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
