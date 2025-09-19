@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="telo">
+        <h1>Banka - bankomat</h1>
+        <div class="tabla">
+            <form method="post" action="/bank/transakcija/">
+                <select name="osoba" id="osoba">
+                    <%for (let o of account){%>
+                        <option value="<%= o.ime%> <%=o.prezime%>"><%=o.ime%> <%=o.prezime%></option>
+                    <%}%>
+                </select>
+                <input type="number" placeholder="Kolicina" name="kolicina" id="kolicina"><br>
+                <input type="radio" name="opcija" value="podigni">
+                <label for="podigni">Podigni novac</label><br>
+                <input type="radio" name="opcija" value="uplati">
+                <label for="uplati">Uplati novac</label><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Cancel">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

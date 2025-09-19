@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="telo">
+    <% if(student !=null){%>
+            <div class="slika">
+                <span><%=student.imePrezime %></span>
+                <img src="<%=student.slika%>" alt="slika">
+            </div>
+            <h1>Svedocanstvo</h1>
+            <%= alert %>
+            <!--
+
+            <ul>
+                <li>predmet: matematika, ocena 5</li>
+                <li>predmet: japanski, ocena 4</li>
+            </ul>
+            -->
+            <ul>
+                <% let sum=0; %>
+                <% for (let i= 0; i < student.ocene.length; i++){ %>
+                    <li>predmet: <%=student.ocene[i].predmet%>, ocena: <%=student.ocene[i].ocena%> </li>
+                    <% sum += student.ocene[i].ocena %>
+                <%}%>
+            </ul>
+
+            <div class="forma">
+                <h4>Prosecna ocena: <%= sum/student.ocene.length %></h4>
+                <form method = "post" action="/unos">
+                    <input type="text" name="imePrezime" id="imePrezime" value="<%=student.imePrezime%>" hidden>
+                    <b>Unesi novu ocenu</b><br><br>
+                    <table>
+                        <tr>
+                            <td>Predmet</td>
+                            <td>
+                                <select name="predmet" id="predmet">
+                                    <option value="matematika">matematika</option>
+                                    <option value="maternji">maternji</option>
+                                    <option value="engleski">engliski</option>
+                                    <option value="fizicko">fizicko</option>
+                                    <option value="muzicko">muzicko</option>
+                                    <option value="likovno">likovno</option>
+                                    <option value="istorija">istorija</option>
+                                    <option value="informatika">informatika</option>
+                                    <option value="fizika">fizika</option>
+                                    <option value="hemija">hemija</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ocena</td>
+                            <td>
+                                <input type="number" name="ocena" id="ocena" min="1" max="5">
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="unesi">
+                </form>
+            </div>
+            <%}%>
+        </div>
+    
+
+</body>
+</html>

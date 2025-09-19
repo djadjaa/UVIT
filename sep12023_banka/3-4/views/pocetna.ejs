@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="telo">
+        <h1>Banka - uvid u stanje</h1>
+        <div class="tabla">
+            <table>
+                <thead>
+                    <th>Ime i prezime</th>
+                    <th>Stanje na racunu</th>
+                </thead>
+
+                <% for(let a of account){%>
+                    <% if(a.stanje >=0 ){ %>
+                        <tr>
+                    <%} else {%>
+                        <tr id="minus">
+                    <%}%>
+                        <td><%=a.ime%> <%=a.prezime%></td>
+                        <td><%=a.stanje%>$</td>
+                    </tr>
+                <%}%>
+                
+            </table>
+
+            <form method="post" action="/bank/dodaj">
+                <input type="text" name="imeiprezime" placeholder="Ime i Prezime">
+                <input type="text" name="stanje" placeholder="Stanje na racunu">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Cancel">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

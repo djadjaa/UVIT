@@ -1,0 +1,31 @@
+.telo {
+    background-image: linear-gradient(to bottom right, red, purple, blue);
+    width: 500px;
+    height: 500px;
+}
+
+.slika{
+    height: 80px;
+    width: 80px;
+    border: solid black 1px;
+    background-color: white;
+}
+
+img{
+    height: 46px;
+    width: 80px;
+}
+
+span{
+    font-size: small;
+}
+
+h1, h4{
+    text-align: center;
+}
+
+.forma{
+    margin-left:auto;
+    margin-right:auto;
+    width: 60%;
+}
